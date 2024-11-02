@@ -1,11 +1,11 @@
 import React from "react";
 
-const Update =()=>{
+const Issue =(props)=>{
     return (<div className="review-container">
-    <p>Update</p>
+    <p>{props.issue}</p>
     
     
     </div>);
 
 };
-export default Update;
+export default Issue;

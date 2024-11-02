@@ -1,11 +1,11 @@
 import React from "react";
 
-const Review =()=>{
+const Print =()=>{
     return (<div className="review-container">
-    <p>Review</p>
+    <p>Print</p>
     
     
     </div>);
 
 };
-export default Review;
+export default Print;

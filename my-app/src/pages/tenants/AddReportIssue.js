@@ -1,11 +1,11 @@
 import React from "react";
 
-const Add =()=>{
+const AddReportIssue =()=>{
     return (<div className="review-container">
-    <p>Add</p>
+    <p>AddReportIssue</p>
     
     
     </div>);
 
 };
-export default Add;
+export default AddReportIssue;
