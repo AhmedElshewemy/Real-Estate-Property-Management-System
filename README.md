@@ -1,70 +1,153 @@
-# Getting Started with Create React App
+# Real Estate Property Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack application for managing real estate properties, leases, and tenants. Built with .NET Core backend and React frontend.
 
-## Available Scripts
+## 🏗️ Architecture
 
-In the project directory, you can run:
+### Backend (.NET Core)
+- **API Layer** - REST API endpoints using ASP.NET Core
+- **Business Layer (BL)** - Business logic and services
+- **Data Layer (DL)** - Database operations and models
+- **Authentication** - JWT-based authentication
 
-### `npm start`
+### Frontend (React)
+- Modern React with functional components
+- React Router for navigation
+- CSS modules for styling
+- Protected routes and authentication
+
+## 🚀 Features
+
+- 🏠 Property Management
+  - Add/Update/Remove properties
+  - Property details and images
+  - Property listing and search
+
+- 📋 Lease Management
+  - Create and manage lease agreements
+  - Track lease status and terms
+  - Lease history
+
+- 👥 Tenant Management
+  - Tenant registration and profiles
+  - Issue reporting system
+  - Tenant communication
+
+- 🔐 Authentication & Authorization
+  - User registration and login
+  - Role-based access control
+  - Secure API endpoints
+
+## 🛠️ Technologies
+
+### Backend
+- ASP.NET Core 8.0
+- Entity Framework Core
+- SQL Server
+- JWT Authentication
+- Repository Pattern
+- Unit of Work Pattern
+
+### Frontend
+- React 18
+- React Router
+- CSS Modules
+- LocalStorage for state persistence
+
+## 🏃‍♂️ Getting Started
+
+### Backend Setup
+1. Navigate to the Backend directory:
+   ```bash
+   cd Backend
+   ```
+2. Restore dependencies:
+   ```bash
+   dotnet restore
+   ```
+3. Update the database:
+   ```bash
+   dotnet ef database update
+   ```
+4. Run the application:
+   ```bash
+   dotnet run --project Api
+   ```
+
+### Frontend Setup
+1. Navigate to the frontend directory:
+   ```bash
+   cd my-app
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🔧 Configuration
 
-### `npm test`
+### Backend
+- Update connection string in `appsettings.json`
+- Configure JWT settings in `appsettings.json`
+- Set up CORS policies as needed
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend
+- Update API base URL in environment files
+- Configure authentication endpoints
 
-### `npm run build`
+## 📁 Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Backend
+```
+Backend/
+├── Api/                 # API Layer
+│   ├── Controllers/     # API endpoints
+│   └── Properties/      # Configuration
+├── BL/                  # Business Layer
+│   ├── DTO/            # Data transfer objects
+│   ├── Interfaces/     # Service interfaces
+│   ├── Repositories/   # Data repositories
+│   ├── Services/       # Business logic
+│   └── Utilities/      # Helper classes
+└── DL/                 # Data Layer
+    ├── Context/        # Database context
+    ├── Migrations/     # EF migrations
+    └── Models/         # Data models
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Frontend
+```
+my-app/
+├── public/          # Static files
+├── src/            # Source code
+│   ├── components/ # Reusable components
+│   ├── css/        # Stylesheets
+│   ├── helper/     # Utility functions
+│   ├── middleware/ # Auth middleware
+│   ├── pages/      # Page components
+│   └── shared/     # Shared components
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🤝 Contributing
 
-### `npm run eject`
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📝 License
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 👥 Authors
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Ahmed Elshewemy
+- Fathy Ahmed
