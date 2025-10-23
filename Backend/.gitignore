@@ -1,0 +1,18 @@
+// filepath: Backend/.gitignore
+# Build stuff
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+
+# VS files
+.vs/
+*.user
+*.suo
+
+# Config
+appsettings.Development.json
+launchSettings.json
+
+# Publish stuff
+Properties/PublishProfiles/
